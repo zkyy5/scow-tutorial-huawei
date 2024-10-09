@@ -95,21 +95,6 @@ tar -xzf tutorial.tar.gz
 
 ![image-8](tutorial_scow_for_ai.assets/image-8.png)
 
-
-## 数据与模型路径
-
-部分集群中, 数据和模型已经提前下载好在公用存储下：
-
-- 数据
-<!-- VAR_PLACEHOLDER -->
-`/lustre/public/tutorial/data`
-
-- 模型
-<!-- VAR_PLACEHOLDER -->
-`/lustre/public/tutorial/models`
-
-如果您所用的集群中不含上述目录，则需按后续教程中的提示进行下载
-
 ## 教程内容
 
 教程目前由 9 个独立的案例构成：
