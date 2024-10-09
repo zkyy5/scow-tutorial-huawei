@@ -120,3 +120,5 @@ tar -xzf tutorial.tar.gz
 > 作者: 黎颖; 龙汀汀
 >
 > 联系方式: yingliclaire@pku.edu.cn;   l.tingting@pku.edu.cn
+> 
+> 测试由 褚苙扬（cly2412307718@stu.pku.edu.cn）同学完成
