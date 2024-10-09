@@ -97,7 +97,7 @@ tar -xzf tutorial.tar.gz
 
 ## 教程内容
 
-教程目前由 9 个独立的案例构成：
+教程目前由 7 个独立的案例构成：
 
 ### Pytorch 基础
   - **[Tutorial1](Tutorial1_regression/tutorial1_regression.ipynb)**: 通过预测房价这一简单案例展示如何使用全连接神经网络解决回归问题，并在单机单显卡上运行案例。
