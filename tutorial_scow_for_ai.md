@@ -126,6 +126,10 @@ tar -xzf tutorial.tar.gz
   - **[Tutorial5](Tutorial5_大模型微调/tutorial5_大模型微调.ipynb)**: 通过在 SCOW 平台上上传模型、数据、镜像模型，展示模型微调。
   - **[Tutorial6](Tutorial6_stable-diffusion-3-medium/tutorial6_stable_diffusion.ipynb)**: stable-diffusion-3-medium 文生图任务，通过 prompt 提示生成对应的图片。
   
+### 使用自定义镜像和模型
+
+  - **[Tutorial7](Tutorial7_使用自定义镜像和模型/tutorial7_使用自定义镜像和模型.ipynb)**: 上传自定义的镜像、模型、数据，使用 AI 训练模块进行训练。
+  
 ---
 
 > 作者: 黎颖; 龙汀汀
