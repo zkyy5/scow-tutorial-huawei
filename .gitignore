@@ -3,9 +3,10 @@
 
 # depreciated
 /Tutorial5_大模型微调_cpm-bee/
+/Tutorial6_上传镜像_数据_模型/
 
 # model and data
 /Tutorial5_大模型微调/data/
 /Tutorial5_大模型微调/model/
-/Tutorial5_大模型微调/tokenizer/
-/Tutorial6_上传镜像_数据_模型/
+/Tutorial5_大模型微调/data.tar.gz
+/Tutorial5_大模型微调/model.tar.gz
