@@ -1,40 +1,29 @@
-# Tutorial SCOW-for-AI
+# Tutorial SCOW
+本教程介绍如何在 SCOW 平台上申请计算资源并运行各类计算任务。 本教程在SCOW HPC集群中完成。在SCOW AI集群中操作过程类似。
 
-人工智能（AI）的迅猛发展正深刻影响着学术界和工业界。AI技术的进步依赖于处理海量数据和复杂模型的能力，因此，高性能计算（HPC）平台成为推动AI研究和应用的关键工具。尽管HPC在技术上提供了强大的支持，其使用的复杂性却给学术研究人员和工业从业者带来了挑战。许多研究人员和工程师面临着平台配置繁琐、资源调度复杂以及编程模型不友好的问题，这些因素可能延缓AI项目的开发进程。
-
-SCOW for AI 是基于 SCOW 研发的算力网络融合与交易平台，通过SCOW for AI，超算用户无需安装任何软件，只需使用现代浏览器即可高效利用超算资源完成 AI 计算任务。用户可以通过 Web 界面进行管理 AI 训练中的数据集、算法、模型，并通过镜像的方式来进行 AI 训练任务，极大降低了使用门槛。
-
-本教程通过一系列在SCOW for AI上运行AI的案例，帮助用户快速掌握在HPC环境中进行AI学习和研究的方法，助力学术界和工业界更高效地利用高性能计算资源。
-
-下面我们首先介绍如何在 SCOW for AI 平台上申请计算资源，然后通过简单案例 Tutorial 0 介绍如何在 SCOW for AI 平台上进行计算，最后是 AI 相关的教程介绍。 
-
-## SCOW for AI 平台申请计算资源
+## SCOW 平台申请计算资源
 
 **1. 登陆**
 
-我们可以通过如下网址访问：
+我们可以通过如下网址访问 (校外访问需通过北大vpn)：
 
-集群入口: https://aigc-scow.pku.edu.cn/dashboard
+集群入口: https://scow-zy.pku.edu.cn/
 
 **2. 创建交互式应用** 
 
-我们的教程是使用 Jupyter Lab 运行的，所以需要在 “交互式应用” 中创建 Jupyter Lab 应用。
+我们的教程使用 VSCode 运行，需要在 “交互式应用” 中创建应用。
 
-![image-20240912200418258](tutorial_scow_for_ai.assets/image-20240912200418258.png)
+![创建应用](tutorial_scow_for_ai.assets/image-1.png)
 
-![image-20240912200516667](tutorial_scow_for_ai.assets/image-20240912200516667.png)
+在 VSCode 应用资源申请页面申请相应的资源，点击最下方的 “提交”，进行创建。
 
-在 Jupyter Lab 应用资源申请页面申请相应的资源，点击最下方的 “提交”，进行创建。注意：这里我们使用了默认的预装了  Jupyter  应用的  **cuda-jupyter:0.3**  镜像，这是一个公共镜像。
+![提交](tutorial_scow_for_ai.assets/image-2.png)
 
-![image-20240912200759529](tutorial_scow_for_ai.assets/image-20240912200759529.png)
+创建成功后，在“已创建的应用”中点击 “连接” 进入应用：
+![连接](tutorial_scow_for_ai.assets/image-3.png)
 
-创建成功后显示 “Running”，点击 “连接” 进入应用：
-
-![image-20240912200928239](tutorial_scow_for_ai.assets/image-20240912200928239.png)
-
-进入 Jupyter Lab 后界面如下：
-
-![image-9](tutorial_scow_for_ai.assets/image-9.png)
+进入 VSCode 后界面如下：
+![VSCode界面](tutorial_scow_for_ai.assets/image-4.png)
 
 ## 安装 conda
 
@@ -46,34 +35,56 @@ sudo apt update
 sudo apt install wget
 
 # 1. 获得最新的miniconda安装包；
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
 
-# 2. 安装到自己的HOME目录下的software/miniconda3中
-chmod +x Miniconda3-latest-Linux-x86_64.sh
-./Miniconda3-latest-Linux-x86_64.sh
+# 2. 安装
+chmod +x Miniconda3-latest-Linux-aarch64.sh
+./Miniconda3-latest-Linux-aarch64.sh
 
 # 3. 安装成功后可以删除安装包，节省存储空间
-rm -f Miniconda3-latest-Linux-x86_64.sh
+rm -f Miniconda3-latest-Linux-aarch64.sh
 
-# 4. 退出重新登录或者执行以下命令，即可导入 conda 环境
+# 4. 执行以下命令，即可导入 conda 环境
 source ~/.bashrc
 
 # 5. 检查是否安装成功
 conda --version
+
+# 6. 初始化
+conda init bash
+
+# 7. 退出命令行再重新连接, 让conda生效
 ```
 
-## 注册ipykernel
+## 安装依赖、注册ipykernel
 
-在使用 Jupyter Notebook 时，注册 `ipykernel` 为 Python 环境的内核是一个重要的步骤，因为这会使得该环境能够被 Jupyter 识别和使用。即使是 Conda 的 `base` 环境，也常常需要进行这种配置。下面我们为 conda 的 base 环境安装和注册 ipykernel：
+在Shell命令行中执行：
 
 ```bash
+conda create -n tutorial python=3.9
+conda activate tutorial
+
+# 添加昇腾相关的环境变量
+mkdir -p ${CONDA_PREFIX}/etc/conda/activate.d/
+echo '#!/bin/bash
+source /usr/local/Ascend/ascend-toolkit/set_env.sh
+source /usr/local/Ascend/nnal/atb/set_env.sh' > ${CONDA_PREFIX}/etc/conda/activate.d/npu_load_env.sh
+chmod +x ${CONDA_PREFIX}/etc/conda/activate.d/npu_load_env.sh
+conda deactivate tutorial
+conda activate tutorial
+
 # 安装内核
-conda install ipykernel
+conda install -y ipykernel
 # 注册内核
-python -m ipykernel install --user --name=base --display-name="base"
+python -m ipykernel install --user --name=tutorial --display-name="tutorial"
+
 # 查看已注册的内核
 jupyter kernelspec list
+
+# 安装依赖
+pip install torch==2.3.1 torch-npu==2.3.1 numpy==1.26.4 matplotlib==3.8.4 pandas==2.2.2 scikit-learn==1.5.0 pyyaml==6.0.2 torchvision==0.18.1 torchaudio==2.3.1 accelerate==1.2.1 scipy==1.13.1 attrs==24.3.0 deepspeed==0.16.2 accelerate==0.30.1 transformers==4.33.2 datasets==3.2.0 evaluate==0.4.3 -i https://mirrors.pku.edu.cn/pypi/web/simple
 ```
+平台已预置了驱动固件和CANN算子库，用户无需安装。
 
 ## 运行 Tutorial 0
 
@@ -82,18 +93,16 @@ jupyter kernelspec list
 在命令行终端中执行：
 
 ```bash
-<!-- VAR_PLACEHOLDER -->
-wget https://scow.pku.edu.cn//tutorial/tutorial.tar.gz
+wget https://scow-zy.pku.edu.cn/tutorial/tutorial.tar.gz
 tar -xzf tutorial.tar.gz
 ```
 
 **2. 运行 Tutorial 0**
 
-在所下载的教程文件夹中打开 tutorial/Tutorial0_hello_world/tutorial0_hello_world.ipynb 文件。可以看到文件中有 markdown 单元格和 python 代码单元格。首先选择  kernel 为 base，然后用鼠标点击选中单元格后，“Ctrl + Enter” 可运行单元格，markdown 在运行后起到渲染的效果，python 会在下方输出结果。注意：苹果电脑使用的快捷键会有所不同。
+在所下载的教程文件夹中打开 tutorial/Tutorial0_hello_world/tutorial0_hello_world.ipynb 文件。可以看到文件中有 markdown 单元格和 python 代码单元格。首先选择  kernel 为 tutorial，然后用鼠标点击选中单元格后，“Ctrl + Enter” 可运行单元格，markdown 在运行后起到渲染的效果，python 会在下方输出结果。注意：苹果电脑使用的快捷键会有所不同。
 
-![image-20240912203146203](tutorial_scow_for_ai.assets/image-20240912203146203.png)
-
-![image-8](tutorial_scow_for_ai.assets/image-8.png)
+![选择kernel](tutorial_scow_for_ai.assets/image-5.png)
+![选择kernel](tutorial_scow_for_ai.assets/image-6.png)
 
 ## 教程内容
 
@@ -108,7 +117,7 @@ tar -xzf tutorial.tar.gz
 
 ### 大模型相关
   - **[Tutorial4](Tutorial4_大模型推理/tutorial4_大模型推理.ipynb)**: 通过在 SCOW 平台上运行 cpm-bee-2b 模型，展示模型推理任务。
-  - **[Tutorial5](Tutorial5_大模型微调/tutorial5_大模型微调.ipynb)**: 通过在 SCOW 平台上上传模型、数据、镜像模型，展示模型微调。
+  - **[Tutorial5](Tutorial5_Bert模型微调/tutorial5_Bert模型微调.ipynb)**: 通过在 SCOW 平台上上传模型、数据、镜像模型，展示模型微调。
   - **[Tutorial6](Tutorial6_stable-diffusion-3-medium/tutorial6_stable_diffusion.ipynb)**: stable-diffusion-3-medium 文生图任务，通过 prompt 提示生成对应的图片。
   
 ### 使用自定义镜像和模型
