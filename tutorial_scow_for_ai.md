@@ -30,10 +30,6 @@
 Conda 是一个开源的包管理和环境管理系统。它用于安装和管理软件包及其依赖项，同时允许用户创建独立的环境，以便在一个系统上运行多个项目。在命令行终端中运行如下命令以安装 conda：
 
 ```bash
-# 0. 安装 wget
-sudo apt update
-sudo apt install wget
-
 # 1. 获得最新的miniconda安装包；
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
 
