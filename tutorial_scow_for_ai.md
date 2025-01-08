@@ -30,6 +30,10 @@
 Conda 是一个开源的包管理和环境管理系统。它用于安装和管理软件包及其依赖项，同时允许用户创建独立的环境，以便在一个系统上运行多个项目。在命令行终端中运行如下命令以安装 conda：
 
 ```bash
+# 0. 安装 wget
+sudo apt update
+sudo apt install wget
+
 # 1. 获得最新的miniconda安装包；
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
 
@@ -78,7 +82,7 @@ python -m ipykernel install --user --name=tutorial --display-name="tutorial"
 jupyter kernelspec list
 
 # 安装依赖
-pip install torch==2.3.1 torch-npu==2.3.1 numpy==1.26.4 matplotlib==3.8.4 pandas==2.2.2 scikit-learn==1.5.0 pyyaml==6.0.2 torchvision==0.18.1 torchaudio==2.3.1 accelerate==1.2.1 scipy==1.13.1 attrs==24.3.0 deepspeed==0.16.2 accelerate==0.30.1 transformers==4.33.2 datasets==3.2.0 evaluate==0.4.3 -i https://mirrors.pku.edu.cn/pypi/web/simple
+pip install torch==2.3.1 torch-npu==2.3.1 numpy==1.26.4 matplotlib==3.8.4 pandas==2.2.2 scikit-learn==1.5.0 pyyaml==6.0.2 torchvision==0.18.1 torchaudio==2.3.1 accelerate==1.2.1 scipy==1.13.1 attrs==24.3.0 deepspeed==0.16.2 transformers==4.33.2 datasets==3.2.0 evaluate==0.4.3 diffusers==0.32.1 sentencepiece==0.2.0 protobuf==5.29.2 -i https://mirrors.pku.edu.cn/pypi/web/simple
 ```
 平台已预置了驱动固件和CANN算子库，用户无需安装。
 

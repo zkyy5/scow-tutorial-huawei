@@ -6,6 +6,7 @@
 /Tutorial6_上传镜像_数据_模型/
 
 # model and data
+/Tutorial2_classification/data/
 /Tutorial5_Bert模型微调/data/
 /Tutorial5_Bert模型微调/model/
 /Tutorial5_Bert模型微调/data.tar.gz
@@ -13,8 +14,10 @@
 
 
 kernel_meta*/
-Tutorial4_大模型推理/cpm-bee-2b/
-Tutorial5_Bert大模型微调/bert-base-uncased/
-Tutorial5_Bert大模型微调/stabilityai/
-Tutorial5_Bert大模型微调/model_trained/
-Tutorial6_stable-diffusion-3-medium/stabilityai/
+/Tutorial4_大模型推理/cpm-bee-2b/
+/Tutorial5_Bert大模型微调/bert-base-uncased/
+/Tutorial5_Bert大模型微调/stabilityai/
+/Tutorial5_Bert大模型微调/model_trained/
+/Tutorial6_stable-diffusion-3-medium/stabilityai/
+/Tutorial6_stable-diffusion-3-medium/*.png
+/Tutorial5_Bert大模型微调/fusion_result.json
