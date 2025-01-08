@@ -1,5 +1,5 @@
 # Tutorial SCOW
-本教程介绍如何在 SCOW 平台上申请计算资源并运行各类计算任务。 本教程在SCOW HPC集群中完成。在SCOW AI集群中操作过程类似。
+本教程介绍如何在 SCOW 平台上申请计算资源并运行各类计算任务。本教程中的Tutorial3、Tutorial7和Tutorial8在SCOW AI集群中完成，其余教程在SCOW HPC集群中完成。
 
 ## SCOW 平台申请计算资源
 
@@ -9,7 +9,7 @@
 
 集群入口: https://scow-zy.pku.edu.cn/
 
-**2. 创建交互式应用** 
+**2. 在 SCOW HPC 集群中安装环境** 
 
 我们的教程使用 VSCode 运行，需要在 “交互式应用” 中创建应用。
 
@@ -97,7 +97,7 @@ wget https://scow-zy.pku.edu.cn/tutorial/tutorial.tar.gz
 tar -xzf tutorial.tar.gz
 ```
 
-**2. 运行 Tutorial 0**
+**2. 运行**
 
 在所下载的教程文件夹中打开 tutorial/Tutorial0_hello_world/tutorial0_hello_world.ipynb 文件。可以看到文件中有 markdown 单元格和 python 代码单元格。首先选择  kernel 为 tutorial，然后用鼠标点击选中单元格后，“Ctrl + Enter” 可运行单元格，markdown 在运行后起到渲染的效果，python 会在下方输出结果。注意：苹果电脑使用的快捷键会有所不同。
 
@@ -119,11 +119,10 @@ tar -xzf tutorial.tar.gz
   - **[Tutorial4](Tutorial4_大模型推理/tutorial4_大模型推理.ipynb)**: 通过在 SCOW 平台上运行 cpm-bee-2b 模型，展示模型推理任务。
   - **[Tutorial5](Tutorial5_Bert模型微调/tutorial5_Bert模型微调.ipynb)**: 通过在 SCOW 平台上上传模型、数据、镜像模型，展示模型微调。
   - **[Tutorial6](Tutorial6_stable-diffusion-3-medium/tutorial6_stable_diffusion.ipynb)**: stable-diffusion-3-medium 文生图任务，通过 prompt 提示生成对应的图片。
-  
-### 使用自定义镜像和模型
+  - **[Tutorial7](Tutorial7_llama_factory/tutorial7_llama_factory.ipynb)**: 使用LLaMA-Factory完成Qwen2.5大模型的微调、推理。
 
-  - **[Tutorial7](Tutorial7_使用自定义镜像和模型/tutorial7_使用自定义镜像和模型.ipynb)**: 上传自定义的镜像、模型、数据，使用 AI 训练模块进行训练。
-  
+### 昇腾算子开发相关
+  - **[Tutorial8](Tutorial8_昇腾算子开发/tutorial8_昇腾算子开发.ipynb)**: 使用Ascend C完成昇腾算子开发。
 ---
 
 > 作者: 黎颖; 龙汀汀
