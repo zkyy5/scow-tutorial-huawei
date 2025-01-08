@@ -106,7 +106,7 @@ tar -xzf tutorial.tar.gz
 
 ## 教程内容
 
-教程目前由 7 个独立的案例构成：
+教程目前由多个独立的案例构成：
 
 ### Pytorch 基础
   - **[Tutorial1](Tutorial1_regression/tutorial1_regression.ipynb)**: 通过预测房价这一简单案例展示如何使用全连接神经网络解决回归问题，并在单机单显卡上运行案例。
@@ -123,6 +123,7 @@ tar -xzf tutorial.tar.gz
 
 ### 昇腾算子开发相关
   - **[Tutorial8](Tutorial8_昇腾算子开发/tutorial8_昇腾算子开发.ipynb)**: 使用Ascend C完成昇腾算子开发。
+
 ---
 
 > 作者: 黎颖; 龙汀汀
