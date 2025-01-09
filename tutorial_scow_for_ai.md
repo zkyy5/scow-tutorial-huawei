@@ -113,7 +113,7 @@ tar -xzf tutorial.tar.gz
 
 ### CV 相关
   - **[Tutorial2](Tutorial2_classification/tutorial2_classification.ipynb)**: 通过MNIST数据集和一个规模较小的简单CNN网络展示使用CNN进行图像分类的简单案例。
-  - **[Tutorial3](Tutorial3_CV/tutorial3_CV.ipynb)**: 这部分旨在展示更接近实际的训练场景，使用ResNet18训练CIFAR-10数据集，并使用一系列函数测试训练过程的性能。
+  - **[Tutorial3](Tutorial3_CV/tutorial3_CV.ipynb)**: 这部分旨在展示更接近实际的训练场景，多卡环境下使用CIFAR-10数据集训练ResNet18模型，并使用一系列函数测试训练过程的性能。
 
 ### 大模型相关
   - **[Tutorial4](Tutorial4_大模型推理/tutorial4_大模型推理.ipynb)**: 通过在 SCOW 平台上运行 cpm-bee-2b 模型，展示模型推理任务。
@@ -126,8 +126,6 @@ tar -xzf tutorial.tar.gz
 
 ---
 
-> 作者: 黎颖; 龙汀汀
+> 作者: 黎颖; 褚苙扬; 石晶; 谢成淋; 龙汀汀
 >
-> 联系方式: yingliclaire@pku.edu.cn;   l.tingting@pku.edu.cn
-> 
-> 测试由 褚苙扬（cly2412307718@stu.pku.edu.cn）同学完成
+> 联系方式: yingliclaire@pku.edu.cn; cly2412307718@stu.pku.edu.cn; jingshi@stu.pku.edu.cn; chenglinxie@pku.edu.cn; l.tingting@pku.edu.cn
