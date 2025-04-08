@@ -21,3 +21,6 @@ kernel_meta*/
 /Tutorial6_stable-diffusion-3-medium/stabilityai/
 /Tutorial6_stable-diffusion-3-medium/*.png
 /Tutorial5_Bert大模型微调/fusion_result.json
+
+/release_pdf/
+/release_web/

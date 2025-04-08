@@ -82,7 +82,11 @@ python -m ipykernel install --user --name=tutorial --display-name="tutorial"
 jupyter kernelspec list
 
 # 安装依赖
-pip install torch==2.3.1 torch-npu==2.3.1 numpy==1.26.4 matplotlib==3.8.4 pandas==2.2.2 scikit-learn==1.5.0 pyyaml==6.0.2 torchvision==0.18.1 torchaudio==2.3.1 accelerate==1.2.1 scipy==1.13.1 attrs==24.3.0 deepspeed==0.16.2 transformers==4.33.2 datasets==3.2.0 evaluate==0.4.3 diffusers==0.32.1 sentencepiece==0.2.0 protobuf==5.29.2 -i https://mirrors.pku.edu.cn/pypi/web/simple
+pip install torch==2.3.1 torch-npu==2.3.1 numpy==1.26.4 matplotlib==3.8.4 pandas==2.2.2 \
+scikit-learn==1.5.0 pyyaml==6.0.2 torchvision==0.18.1 torchaudio==2.3.1 accelerate==1.2.1 \
+scipy==1.13.1 attrs==24.3.0 deepspeed==0.16.2 transformers==4.33.2 datasets==3.2.0 \
+evaluate==0.4.3 diffusers==0.32.1 sentencepiece==0.2.0 protobuf==5.29.2 \
+-i https://mirrors.pku.edu.cn/pypi/web/simple
 ```
 平台已预置了驱动固件和CANN算子库，用户无需安装。
 
@@ -120,6 +124,7 @@ tar -xzf tutorial.tar.gz
   - **[Tutorial5](Tutorial5_Bert模型微调/tutorial5_Bert模型微调.ipynb)**: 通过在 SCOW 平台上上传模型、数据、镜像模型，展示模型微调。
   - **[Tutorial6](Tutorial6_stable-diffusion-3-medium/tutorial6_stable_diffusion.ipynb)**: stable-diffusion-3-medium 文生图任务，通过 prompt 提示生成对应的图片。
   - **[Tutorial7](Tutorial7_llama_factory/tutorial7_llama_factory.ipynb)**: 使用LLaMA-Factory完成Qwen2.5大模型的微调、推理。
+  - **[Tutorial9](Tutorial9_CLIP/tutorial9_CLIP.ipynb)**: 使用CLIP模型进行图像分类。
 
 ### 昇腾算子开发相关
   - **[Tutorial8](Tutorial8_昇腾算子开发/tutorial8_昇腾算子开发.ipynb)**: 使用Ascend C完成昇腾算子开发。
