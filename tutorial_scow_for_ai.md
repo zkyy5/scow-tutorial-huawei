@@ -1,7 +1,11 @@
 # Tutorial SCOW
-本教程介绍如何在 SCOW 平台上申请计算资源并运行各类计算任务。本教程中的Tutorial3、Tutorial7和Tutorial8在SCOW AI集群中完成，其余教程在SCOW HPC集群中完成。
+本教程介绍如何在 SCOW 平台上申请计算资源并运行各类计算任务。
 
-## SCOW 平台申请计算资源
+平台分为SCOW AI和SCOW HPC集群。其中SCOW AI是基于Docker容器的算力集群，SCOW HPC是基于裸金属服务器的算力集群。请根据自身情况选择使用。两个集群里，用户共享同一个HOME目录。
+
+本教程中的Tutorial3、Tutorial7和Tutorial8在SCOW AI集群中完成，其余教程在SCOW HPC集群中完成。
+
+## SCOW HPC 平台申请计算资源 (使用SCOW AI集群则不需要)
 
 **1. 登陆**
 
