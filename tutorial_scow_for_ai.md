@@ -3,7 +3,7 @@
 
 平台分为SCOW AI和SCOW HPC集群。其中SCOW AI是基于Docker容器的算力集群，SCOW HPC是基于裸金属服务器的算力集群。请根据自身情况选择使用。两个集群里，用户共享同一个HOME目录。
 
-本教程中的Tutorial3、Tutorial7和Tutorial8在SCOW AI集群中完成，其余教程在SCOW HPC集群中完成。
+本教程中的Tutorial3、Tutorial7、Tutorial8和Tutorial10在SCOW AI集群中完成，其余教程在SCOW HPC集群中完成。
 
 ## SCOW HPC 平台申请计算资源 (使用SCOW AI集群则不需要)
 
@@ -129,6 +129,7 @@ tar -xzf tutorial.tar.gz
   - **[Tutorial6](Tutorial6_stable-diffusion-3-medium/tutorial6_stable_diffusion.ipynb)**: stable-diffusion-3-medium 文生图任务，通过 prompt 提示生成对应的图片。
   - **[Tutorial7](Tutorial7_llama_factory/tutorial7_llama_factory.ipynb)**: 使用LLaMA-Factory完成Qwen2.5大模型的微调、推理。
   - **[Tutorial9](Tutorial9_CLIP/tutorial9_CLIP.ipynb)**: 使用CLIP模型进行图像分类。
+  - **[Tutorial10](Tutorial10_Mindformers模型推理/tutorial10_mindformers.ipynb)**: 使用Mindformers进行模型推理。
 
 ### 昇腾算子开发相关
   - **[Tutorial8](Tutorial8_昇腾算子开发/tutorial8_昇腾算子开发.ipynb)**: 使用Ascend C完成昇腾算子开发。
