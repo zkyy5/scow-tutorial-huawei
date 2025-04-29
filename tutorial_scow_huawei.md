@@ -136,7 +136,8 @@ tar -xzf tutorial.tar.gz
   - **[Tutorial8](Tutorial8_昇腾算子开发/tutorial8_昇腾算子开发.ipynb)**: 使用Ascend C完成昇腾算子开发。
 
 ---
-
+> 联系人: 龙汀汀 l.tingting@pku.edu.cn
+> 
 > 作者: 黎颖; 褚苙扬; 石晶; 谢成淋; 龙汀汀
 >
 > 联系方式: yingliclaire@pku.edu.cn; cly2412307718@stu.pku.edu.cn; jingshi@stu.pku.edu.cn; chenglinxie@pku.edu.cn; l.tingting@pku.edu.cn
