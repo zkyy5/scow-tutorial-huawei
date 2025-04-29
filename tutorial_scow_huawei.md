@@ -1,17 +1,15 @@
 # Tutorial SCOW
-本教程介绍如何在 SCOW 平台上申请计算资源并运行各类计算任务。
+本教程介绍如何在基于 [SCOW](https://www.pkuscow.com/) 的华为鲲鹏昇腾集群上申请计算资源并运行各类计算任务。本教程已纳入 [华为官方在线课程](https://www.hiascend.com/developer/courses/detail/1909399063897702401)。
 
-平台分为SCOW AI和SCOW HPC集群。其中SCOW AI是基于Docker容器的算力集群，SCOW HPC是基于裸金属服务器的算力集群。请根据自身情况选择使用。两个集群里，用户共享同一个HOME目录。
+平台分为SCOW AI和SCOW HPC集群（根据不同需求，某些单位部署的SCOW系统仅包含SCOW HPC或SCOW AI）。其中SCOW AI是基于Kubernetes容器的算力集群，SCOW HPC是基于鹤思作业调度系统的裸金属服务器的算力集群。请根据自身情况选择使用。两个集群里，用户共享同一个HOME目录。
 
-本教程中的Tutorial3、Tutorial7、Tutorial8和Tutorial10在SCOW AI集群中完成，其余教程在SCOW HPC集群中完成。
+本教程中的Tutorial3、Tutorial7、Tutorial8、Tutorial10、Tutorial11 在SCOW AI集群中完成，其余教程在SCOW HPC集群中完成。
 
 ## SCOW HPC 平台申请计算资源 (使用SCOW AI集群则不需要)
 
 **1. 登陆**
 
-我们可以通过如下网址访问 (校外访问需通过北大vpn)：
-
-集群入口: https://scow-zy.pku.edu.cn/
+请从集群管理员处获取登录地址。
 
 **2. 在 SCOW HPC 集群中安装环境** 
 
