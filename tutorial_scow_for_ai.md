@@ -130,6 +130,7 @@ tar -xzf tutorial.tar.gz
   - **[Tutorial7](Tutorial7_llama_factory/tutorial7_llama_factory.ipynb)**: 使用LLaMA-Factory完成Qwen2.5大模型的微调、推理。
   - **[Tutorial9](Tutorial9_CLIP/tutorial9_CLIP.ipynb)**: 使用CLIP模型进行图像分类。
   - **[Tutorial10](Tutorial10_Mindformers模型推理/tutorial10_mindformers.ipynb)**: 使用Mindformers进行模型推理。
+  - **[Tutorial11](Tutorial11_PLLaVA视频理解模型推理/tutorial11_PLLaVA视频理解模型推理.ipynb)**: 实现PLLaVA视频理解模型在昇腾上的适配并进行推理
 
 ### 昇腾算子开发相关
   - **[Tutorial8](Tutorial8_昇腾算子开发/tutorial8_昇腾算子开发.ipynb)**: 使用Ascend C完成昇腾算子开发。
