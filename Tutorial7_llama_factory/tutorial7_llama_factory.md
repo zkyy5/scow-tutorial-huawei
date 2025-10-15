@@ -1,7 +1,7 @@
 # Tutorial7: 使用LLaMA-Factory官方镜像完成Qwen2.5大模型的微调、推理
 
 * 集群类型：SCOW AI集群
-* 所需镜像：app-store-images.pku.edu.cn/pkuhpc/llama-factory-ascend-v1:20250909-8.0.0-910b-ubuntu22.04-py3.10
+* 所需镜像：app-store-images.pku.edu.cn/hiyouga/llamafactory:0.9.4-npu-a2
 * 所需模型：Qwen2.5-1.5B-Instruct
 * 所需数据集：教程内提供
 * 所需资源：建议使用1张910B NPU运行本教程。
