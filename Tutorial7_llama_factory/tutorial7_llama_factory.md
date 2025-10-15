@@ -640,10 +640,10 @@ logging_dir: ./logs/tensorboard
 # report_to: tensorboard" > config.yaml
 ```
 2.1.2 粘贴到终端terminal，再按回车键执行这些代码，完成创建config.yaml 文件
-![alt text](../tutorial_scow_for_ai.assets/2.1.2-HW-cli-create-config-yaml.png)
+![alt text](image-42.png)
 
 2.1.3 查看在app文件夹中已经创建了 config.yaml 文件，点击这个文件，右侧上部的窗口中显示文件包含的内容
-![alt text](../tutorial_scow_for_ai.assets/2.1.3-HW-check-config-yaml.png)
+![alt text](image-43.png)
 
 2.2 在app文件夹中创建 step1_model_reasoning.py 文件，这是作为模型微调前做推理的文件
 2.2.1 点击红色箭头所指的图标，新建文件，在蓝色方框内给新建的文件取名 step1_model_reasoning.py 再按回车键
@@ -742,7 +742,7 @@ for model_dir in [os.environ.get('SCOW_AI_MODEL_PATH'), os.path.join(os.environ.
 3.1 使用还没有经过微调的模型进行推理
 
 3.1.1 在右侧下半部的终端terminal中，粘贴命令 python step1_model_reasoning.py 再按回车键
-![alt text](../tutorial_scow_for_ai.assets/3.1.1-HW-cli-run-step1-py￼￼.png)
+![alt text](image-44.png)
 
 3.1.2 在右侧下半部的终端terminal中，查看推理结果
 可以看到下载并使用的是 Qwen2.5-1.5B-Instruct 模型，任务是QWen大模型的身份认知，没有经过微调的大模型认为自己是 AI助手 通义千问
