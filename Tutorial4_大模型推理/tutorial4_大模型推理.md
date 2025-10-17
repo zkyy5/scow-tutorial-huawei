@@ -123,30 +123,30 @@ modelscope download --model Qwen/Qwen3-4B-Instruct-2507 --local_dir ./Qwen/Qwen/
 完整的VSCode应用包含的左侧文件夹、右侧上半区域的文件显示窗口、和右侧下半区域的终端
 
 3.2 下载大模型推理所需要的工具
-3.2.1 
-* transformers 在右侧下半部的终端terminal中，粘贴命令 
+3.2.1 transformers
+拷贝下面命令，在右侧下半部的终端terminal中，粘贴命令 
 ```bash
 pip install transformers==4.57.1 
 ```
 再按回车键，确保成功安装
 ![alt text](image-27.png)
 
-3.2.2
-* accelerate 在右侧下半部的终端terminal中，粘贴命令 
+3.2.2 accelerate
+拷贝下面命令，在右侧下半部的终端terminal中，粘贴命令
 ```bash
 pip install accelerate==1.10.1 
 ```
 再按回车键，确保成功安装
 
-3.2.2
-* torch-npu 在右侧下半部的终端terminal中，粘贴命令 
+3.2.2 torch-npu
+拷贝下面命令，在右侧下半部的终端terminal中，粘贴命令
 ```bash
 pip3 install torch-npu==2.6.0
 ```
 再按回车键，确保成功安装
 
-3.2.3
-* torchvision 在右侧下半部的终端terminal中，粘贴命令 
+3.2.3 torchvision
+拷贝下面命令，在右侧下半部的终端terminal中，粘贴命令
 ```bash
 pip3 install torchvision==0.21.0 
 ```
