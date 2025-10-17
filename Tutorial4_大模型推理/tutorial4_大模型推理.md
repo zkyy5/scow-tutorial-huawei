@@ -161,7 +161,6 @@ pip3 install torchvision==0.21.0
 
 3.3.3 拷贝下面代码:
 ```python
-—————————————————
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import os
 import torch
