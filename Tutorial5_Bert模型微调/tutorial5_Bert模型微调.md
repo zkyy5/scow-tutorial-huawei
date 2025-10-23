@@ -95,6 +95,7 @@ evaluate==0.4.3 diffusers==0.32.1 sentencepiece==0.2.0 protobuf==5.29.2 \
 
 pip install  huggingface_hub==0.35.3 
 # 平台已预置了驱动固件和CANN算子库，用户无需安装。
+```
 
 ## 2. 下载模型和数据
 ```
