@@ -14,7 +14,7 @@
 
 Stable Diffusion 是由 Stability AI 开发的一个开源的深度学习模型，用于生成高质量图像。
 
-## 1.环境安装与应用创建
+## 1. 环境安装与应用创建
 ### 1.1 登录
 我们可以通过如下网址访问 (校外访问需通过北大vpn)：
 
@@ -93,7 +93,7 @@ evaluate==0.4.3 diffusers==0.32.1 sentencepiece==0.2.0 protobuf==5.29.2 \
 pip install  huggingface_hub==0.35.3 
 # 平台已预置了驱动固件和CANN算子库，用户无需安装。
 ```
-## 2.下载模型
+## 2. 下载模型
 请前往 huggingface 官网注册账号、同意模型使用协议 (https://huggingface.co/stabilityai/stable-diffusion-3-medium-diffusers), 然后获取 access token (https://huggingface.co/settings/tokens) 用于后续下载
 
 建议在shell中与当前脚本相同目录下进行模型下载，而不是在应用中进行，以免造成资源浪费
@@ -105,7 +105,7 @@ export HF_ENDPOINT=https://hf-mirror.com
 huggingface-cli download --token hf_*** --resume-download stabilityai/stable-diffusion-3-medium-diffusers --local-dir stabilityai/stable-diffusion-3-medium-diffusers
 ```
 
-## 3.文生图
+## 3. 文生图
 
 运行以下代码，从文字生成图像：
 ```
