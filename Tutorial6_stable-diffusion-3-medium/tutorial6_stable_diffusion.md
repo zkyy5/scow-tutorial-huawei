@@ -24,19 +24,19 @@ Stable Diffusion 是由 Stability AI 开发的一个开源的深度学习模型�
 
 我们的教程使用 VSCode 运行，需要在 “交互式应用” 中创建应用。
 
-![alt text](image-1.png)
+![alt text](assets/image-1.png)
 
 在 VSCode 应用资源申请页面申请相应的资源，点击最下方的 “提交”，进行创建。
 
-![alt text](image-2.png)
+![alt text](assets/image-2.png)
 
 创建成功后，在“已创建的应用”中点击 “连接” 进入应用：
 
-![alt text](image-3.png)
+![alt text](assets/image-3.png)
 
 进入 VSCode 后界面如下：
 
-![alt text](image-4.png)
+![alt text](assets/image-4.png)
 
 ### 1.3 安装conda
 Conda 是一个开源的包管理和环境管理系统。它用于安装和管理软件包及其依赖项，同时允许用户创建独立的环境，以便在一个系统上运行多个项目。在命令行终端中运行如下命令以安装 conda：
@@ -102,7 +102,7 @@ pip install  huggingface_hub==0.35.3
 
 建议在shell中与当前脚本相同目录下进行模型下载，而不是在应用中进行，以免造成资源浪费
 
-![alt text](image-5.png)
+![alt text](assets/image-5.png)
 
 下载模型, 其中 "hf_***" 替换为自己的access token
 ```
